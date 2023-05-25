@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Room</title>
+
+    <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+    <script src="/webjars/jquery/jquery.min.js"></script>
+    <script src="/webjars/sockjs-client/sockjs.min.js"></script>
+    <script src="/webjars/stomp-websocket/stomp.min.js"></script>
+    <script src="/logic.js"></script>
+    
+</head>
+<body>
+    <div id="name-form" class="bg-primary d-flex align-items-center">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4 offset-md-4">
+                    <div class="input-group">
+                        <input class="form-control" type="text" placeholder="Enter Your name" id="name-value" autofocus>
+                        <div class="input-group-append">
+                            <button class="btn btn-dark" id="login">Enter</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="chatroom" class="d-none bg-dark">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <div class="card mt-4">
+                        <div class="card-title text-center">
+
+                        </div>
+                        <div class="card-body">
+                            <div class="input-group">
+                                <input class="form-control" type="text" placeholder="Enter Your Message" id="message-value" autofocus>
+                                <div class="input-group-append">
+                                    <button class="btn btn-dark mr-4" id="send">Send</button>
+                                    <button class="btn btn-dark" id="logout">Logout</button>
+                                </div>
+                            </div>
+                            <div class="table-responsive">
+                                <table id="messagecontainer" class="mt-4 table-stripped">
+
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
